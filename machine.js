@@ -12,7 +12,7 @@ let values = [
 ]
 
 function getRandomValue() {
-    return values[Math.floor(Math.random() * 3)]
+    return values[Math.floor(Math.random() * 7)]
 }
 let animationid;
 
