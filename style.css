@@ -1,0 +1,139 @@
+:root {
+    --speed: 0;
+}
+
+* {
+    /* For browsers that do not support gradients */
+    margin: 0;
+    padding: 0;
+}
+
+.casino {
+    background-color: blueviolet;
+    text-align: center;
+    color: whitesmoke;
+    margin: 0%;
+    padding: 0;
+    height: 9rem;
+    font-size: 3em;
+}
+
+.machine {
+    width: 900px;
+    margin: 5px;
+    margin-left: 28em;
+    background-color: purple;
+    border: dashed paleturquoise 3px;
+    display: flex;
+    z-index: 5;
+}
+
+#start {
+    height: 3em;
+    width: 5em;
+    font-size: 3em;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgb(255 255 255 / 75%);
+    margin: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    *border: 0;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0.3em;
+    -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+#stop {
+    height: 3em;
+    width: 5em;
+    font-size: 3em;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgb(255 255 255 / 75%);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    *border: 0;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0.3em;
+    -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+#result {
+    height: 8em;
+    width: 13em;
+    font-size: 3em;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 13em;
+}
+
+#speed {
+    font-size: 3em;
+    margin: 10px;
+    margin-left: 30px;
+    width: 70px;
+    margin-left: 13em;
+}
+
+.slot {
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    background-color: plum;
+    border: solid lightcoral 3px;
+    text-align: center;
+    font-size: 80pt;
+    line-height: 250px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.slot>.value {
+    z-index: 3;
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/var(--speed));
+}
+
+@keyframes slotspin {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(200px);
+    }
+}
