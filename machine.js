@@ -45,7 +45,7 @@ start.onclick = function() {
 
     speed.innerText = "3";
     document.documentElement.style.setProperty('--speed', 3)
-    updateanimation(3);
+    updateanimation(speed.innerText);
     speed.onchange = function(ev) {
         document.documentElement.style.setProperty('--speed', ev.target.value)
         updateanimation(ev.target.value);
