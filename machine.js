@@ -44,7 +44,7 @@ function stopanimation() {
 start.onclick = function() {
 
   
-    document.documentElement.style.setProperty('--speed', 3)
+    document.documentElement.style.setProperty('--speed', ParseInt(speed.innerText))
     updateanimation(ParseInt(speed.innerText));
     speed.onchange = function(ev) {
         document.documentElement.style.setProperty('--speed', ev.target.value)
