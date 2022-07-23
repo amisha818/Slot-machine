@@ -29,9 +29,9 @@ function updateanimation(newspeed) {
 let myVar;
 
 function stopanimation() {
-if (animationid) clearInterval(animationid)
+
     document.documentElement.style.setProperty('--speed', 0)
-   
+   if (animationid) clearInterval(animationid)
     if (value1.innerText == value2.innerText) {
         if (value1.innerText == value3.innerText) {
             result.innerText = "Congratulations! you win 500 coins"
