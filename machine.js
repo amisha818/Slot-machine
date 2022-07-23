@@ -29,7 +29,7 @@ function updateanimation(newspeed) {
 let myVar;
 
 function stopanimation() {
-
+if (animationid) clearInterval(animationid)
     document.documentElement.style.setProperty('--speed', 0)
    
     if (value1.innerText == value2.innerText) {
