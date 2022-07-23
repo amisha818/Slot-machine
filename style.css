@@ -130,17 +130,10 @@
 }
 
 @keyframes slotspin {
-    0% {
-        transform: translateY(00px);
-    }
-    
     50% {
         transform: translateY(125px);
     }
     75% {
         transform: translateY(-125px);
-    }
-    100% {
-        transform: translateY(00px);
     }
 }
